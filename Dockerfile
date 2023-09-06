@@ -27,4 +27,4 @@ RUN chown -R app:app $APP_HOME
 
 USER app
 
-ENTRYPOINT ["./app.py"]
+ENTRYPOINT ["python3", "./app.py"]
