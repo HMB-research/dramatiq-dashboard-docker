@@ -22,7 +22,9 @@ COPY requirements.txt $APP_HOME/requirements.txt
 RUN pip install --no-cache-dir -r $APP_HOME/requirements.txt
 
 COPY app.py $APP_HOME/
+RUN chmod +x $APP_HOME/app.py  # Make it executable
 RUN chown -R app:app $APP_HOME
+
 USER app
 
 ENTRYPOINT ["./app.py"]
