@@ -1,4 +1,6 @@
-FROM python:3.8.2-alpine
+# Use an official Python runtime with amd64 architecture
+FROM --platform=linux/amd64 python:3.11.1-slim-buster
+
 
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
